@@ -5,10 +5,10 @@ import json
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, ContextTypes, filters
 
-UPLOAD_FOLDER = "images"
+UPLOAD_FOLDER = "/tmp/images"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-TOKEN_FILE = "tokens.json"
+TOKEN_FILE = "/tmp/tokens.json"
 if os.path.exists(TOKEN_FILE):
     with open(TOKEN_FILE, "r") as f:
         token_db = json.load(f)
