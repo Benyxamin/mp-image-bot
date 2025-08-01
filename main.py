@@ -61,7 +61,7 @@ async def handle_get(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == "__main__":
     import os
-    BOT_TOKEN = "8201088808:AAEZSz1sE3ddD211jQ9uGVsoMlEoeCWiqXI"
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
 
     if not BOT_TOKEN:
         print("خطا: توکن ربات تعریف نشده در متغیر محیطی BOT_TOKEN")
